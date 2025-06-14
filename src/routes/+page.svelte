@@ -13,7 +13,7 @@
 
 	<ul class="my-3 list-inside list-disc">
 		<li class="italic">
-			"A person with whom you can share your deepest thoughts feelings, and dreams with; your <strong
+			"A person with whom you can share your deepest thoughts, feelings and dreams with; your <strong
 				class="underline"
 				>soul
 			</strong> friend".
@@ -46,11 +46,11 @@
 			<p class="pl-6">
 				Después de ambos vivir muchas experiencias, dificultades y logros <strong
 					>(6 años de por medio)</strong
-				>, nos pudimos encontrar nuevamente un domingo 18 de mayo... me pense mil veces el escribirte
-				un mensaje y temía que ya no me recordarías, pero para mi sorpresa aun me recordabas, ese
-				dia fue uno de los mejores que he tenido en años, de cierta manera pero con temor te mostré
-				el anillo que me diste en el colegio y de esa manera un tanto sutil te quise expresar que te
-				esperé por mucho tiempo...
+				>, nos pudimos encontrar nuevamente un domingo 18 de mayo... me pense mil veces el
+				escribirte un mensaje y temía que ya no me recordarías, pero para mi sorpresa aun me
+				recordabas, ese dia fue uno de los mejores que he tenido en años, de cierta manera pero con
+				temor te mostré el anillo que me diste en el colegio y de esa manera un tanto sutil te quise
+				expresar que te esperé por mucho tiempo...
 			</p>
 		</li>
 		<li>
