@@ -19,6 +19,7 @@
         pkgs = import nixpkgs { inherit system; };
 
         devPackages = with nixpkgs; [
+          pkgs.nodejs
           pkgs.pnpm
         ];
 
