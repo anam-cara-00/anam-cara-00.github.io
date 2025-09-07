@@ -1,11 +1,16 @@
+<script>
+	let open = false;
+</script>
+
 <main
 	class="flex min-h-screen items-center justify-center bg-gradient-to-b from-sky-50 to-white p-8"
 >
 	<!-- ENVELOPE -->
 	<div class="flex flex-col items-center">
-		<div class="sway relative">
+		<div class="sway envelope relative" on:click={() => (open = !open)} class:open>
+			<!-- Flap -->
 			<svg
-				class="triangle absolute top-0 left-0 h-24 w-85 rounded-xl"
+				class="triangle absolute top-0 left-0 h-24 w-85 origin-top transition-transform duration-700 ease-in-out"
 				viewBox="0 0 100 100"
 				preserveAspectRatio="none"
 			>
@@ -20,7 +25,7 @@
 
 			<!-- Envelope body -->
 			<section
-				class="h-50 w-85 rounded-xl bg-gradient-to-b from-[#f5e6d6] to-[#e6d0b0] shadow-lg"
+				class="h-50 w-85 rounded-b-xl bg-gradient-to-b from-[#f5e6d6] to-[#e6d0b0] shadow-lg"
 			></section>
 		</div>
 
@@ -31,6 +36,7 @@
 <style>
 	.triangle {
 		filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.2));
+		transform-origin: top center; /* ✅ make flap rotate around top */
 	}
 
 	/* Sway animation */
@@ -45,5 +51,10 @@
 		100% {
 			transform: translateY(-12px);
 		}
+	}
+
+	/* Open state rotates flap upward */
+	.open .triangle {
+		transform: rotateX(-180deg);
 	}
 </style>
