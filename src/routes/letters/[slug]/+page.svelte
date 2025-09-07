@@ -8,6 +8,17 @@
 	<!-- ENVELOPE -->
 	<div class="flex flex-col items-center">
 		<div class="sway envelope relative" on:click={() => (open = !open)} class:open>
+			<!-- ACTUAL LETTER -->
+			<section
+				class="letter no-scrollbar absolute h-120 overflow-y-auto rounded-xl bg-gradient-to-b from-[#fffef6] to-[#fff9e7] shadow-sm transition-all duration-700 ease-in-out"
+				class:open-letter={open}
+			>
+				<div class="p-6 text-gray-700">
+					<p>✨ Actual contenido de la carta dsjadjksads ✨</p>
+					<p class="mt-4"></p>
+				</div>
+			</section>
+
 			<!-- Flap -->
 			<svg
 				class="triangle absolute top-0 left-0 h-24 w-85 origin-top transition-transform duration-700 ease-in-out"
@@ -25,18 +36,20 @@
 
 			<!-- Envelope body -->
 			<section
-				class="h-50 w-85 rounded-b-xl bg-gradient-to-b from-[#f5e6d6] to-[#e6d0b0] shadow-lg"
+				class="h-50 w-85 rounded-b-xl bg-gradient-to-b from-[#f5e6d6] to-[#ceba9e] shadow-lg"
 			></section>
-		</div>
 
-		<small class="mt-5 text-[#5a5a5a] opacity-80"> Clickea el sobre para abrir la carta </small>
+			<small class="mt-5 text-center text-[#5a5a5a] opacity-80 select-none">
+				Clickea el sobre para abrir la carta
+			</small>
+		</div>
 	</div>
 </main>
 
 <style>
 	.triangle {
 		filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.2));
-		transform-origin: top center; /* ✅ make flap rotate around top */
+		transform-origin: top center;
 	}
 
 	/* Sway animation */
@@ -53,8 +66,28 @@
 		}
 	}
 
-	/* Open state rotates flap upward */
+	/* Flap opens */
 	.open .triangle {
 		transform: rotateX(-180deg);
+	}
+
+	/* Letter styles */
+	.letter {
+		opacity: 0;
+		transform: scale(0.5) translateY(20px);
+		pointer-events: none;
+		z-index: 20;
+	}
+
+	.open-letter {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		width: 100%;
+		margin: auto;
+		opacity: 1;
+		transform: scale(1.08) translateY(-120px);
+		pointer-events: auto;
 	}
 </style>
