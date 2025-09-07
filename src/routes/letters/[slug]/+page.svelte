@@ -1,4 +1,5 @@
 <script>
+	export let data;
 	let open = false;
 </script>
 
@@ -7,15 +8,23 @@
 >
 	<!-- ENVELOPE -->
 	<div class="flex flex-col items-center">
-		<div class="sway envelope relative" on:click={() => (open = !open)} class:open>
+		<div
+			class="sway envelope relative"
+			on:click={() => (open = !open)}
+			class:open
+			role="button"
+			tabindex="0"
+		>
 			<!-- ACTUAL LETTER -->
 			<section
 				class="letter no-scrollbar absolute h-120 overflow-y-auto rounded-xl bg-gradient-to-b from-[#fffef6] to-[#fff9e7] shadow-sm transition-all duration-700 ease-in-out"
 				class:open-letter={open}
 			>
-				<div class="p-6 text-gray-700">
-					<p>✨ Actual contenido de la carta dsjadjksads ✨</p>
-					<p class="mt-4"></p>
+				<div class="p-6">
+					<h2 class="text-right italic">{data.date}</h2>
+					<h1 class="text-center font-bold">{data.title}{data.emoji}</h1>
+					<h2 class="font-bold text-[#7b6a50]">Andrea:</h2>
+					<p class="mt-3">{data.content}</p>
 				</div>
 			</section>
 
