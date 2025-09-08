@@ -24,7 +24,7 @@
 					<h2 class="text-right italic">{data.date}</h2>
 					<h1 class="text-center font-bold">{data.title}{data.emoji}</h1>
 					<h2 class="font-bold text-[#7b6a50]">Andrea:</h2>
-					<p class="mt-3">{data.content}</p>
+					<p class="whitespace-pre-wrap">{data.content}</p>
 				</div>
 			</section>
 
@@ -63,7 +63,7 @@
 
 	/* Sway animation */
 	.sway {
-		animation: swayUp 1.5s ease-in-out infinite alternate;
+		animation: swayUp 2.5s ease-in-out infinite alternate;
 	}
 
 	@keyframes swayUp {
