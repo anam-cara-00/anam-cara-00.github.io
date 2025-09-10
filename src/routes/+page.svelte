@@ -1,3 +1,8 @@
+<script>
+	export let data;
+	const { letters } = data;
+</script>
+
 <main class="container mx-auto px-3">
 	<h1 class="my-3 text-3xl font-bold">Anam Cara~</h1>
 	<hr />
@@ -112,7 +117,26 @@
 				tengo mucho aprecio, admiración y cariño Andrea... espero me permitas seguir compartiendo
 				contigo hasta el final de mis días.
 			</p>
+			<p class="mt-5">
+				<strong class="">NOTA:</strong>
+				No he tenido el tiempo para agregar mas eventos bonitos que hemos vivido, pero realice un apartado
+				de cartas virtuales, espero te guste, lo hice con mucho cariño y espero poder seguir actualizando
+				la pagina...
+			</p>
 		</li>
+	</ul>
+
+	<h2 class="text-2xl font-bold">Cartas virtuales:</h2>
+	<ul class="my-3 list-inside list-disc">
+		{#each letters as letter, index}
+			<li class="mt-2">
+				<a
+					href={`/letters/${letter.key}`}
+					class="text-blue-500 transition hover:text-blue-800 hover:underline"
+					>{letter.title}{index === letters.length - 1 ? ' 🆕✨' : ''}</a
+				>
+			</li>
+		{/each}
 	</ul>
 
 	<h2 class="text-2xl font-bold">Memorias:</h2>

@@ -1,5 +1,9 @@
 @import 'tailwindcss';
 
-@theme {
-	--font-sans: 'Courier New', 'sans-serif';
+@utility no-scrollbar {
+	@apply [scrollbar-width:none] [&::-webkit-scrollbar]:hidden;
 }
+
+/* @theme { */
+/* 	--font-sans: 'Courier New', 'sans-serif'; */
+/* } */
