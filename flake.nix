@@ -13,7 +13,7 @@
       flake-utils,
       ...
     }@inputs:
-    flake-utils.lib.eachSystem [ "x86_64-darwin" "aarch64-darwin" "x86_64-linux" "aarch64-linux" ] (
+    flake-utils.lib.eachDefaultSystem (
       system:
       let
         pkgs = import nixpkgs { inherit system; };
@@ -23,7 +23,7 @@
           pkgs.pnpm
         ];
 
-        postShellHook = '''';
+        postShellHook = "";
       in
       {
 
