@@ -24,3 +24,5 @@ vite.config.ts.timestamp-*
 
 # other
 .direnv/
+input.txt
+output.txt
