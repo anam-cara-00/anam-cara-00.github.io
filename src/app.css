@@ -4,6 +4,6 @@
     @apply [scrollbar-width:none] [&::-webkit-scrollbar]:hidden;
 }
 
-/* @theme { */
-/* 	--font-sans: 'Courier New', 'sans-serif'; */
-/* } */
+@theme {
+    --font-sans: 'Courier New', 'sans-serif';
+}
